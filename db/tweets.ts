@@ -18,6 +18,27 @@ const insert = (tweet: Tweet) => {
   });
 };
 
+const getCountByTagId = (tagId: number) => {
+  return knex('tweets').where({ tag_id: tagId }).count().then((results: { count: number }[]) => {
+    return results[0].count;
+  });
+};
+
+const getCountByTagNames = (tagNames: string[]) => {
+  return knex('tweets')
+    .innerJoin('tags', 'tweets.tag_id', 'tags.id')
+    .whereIn('tags.name', tagNames)
+    .select('tags.name')
+    .groupBy('tweets.tag_id')
+    .groupBy('tags.name')
+    .count()
+    .then((results: { name: string, count: number }[]) => {
+      return results;
+    });
+};
+
 export default {
-  insert
+  insert,
+  getCountByTagId,
+  getCountByTagNames
 }

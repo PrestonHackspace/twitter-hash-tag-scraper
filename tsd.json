@@ -13,6 +13,15 @@
     },
     "bluebird/bluebird.d.ts": {
       "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    },
+    "express/express.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    },
+    "mime/mime.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
     }
   }
 }
