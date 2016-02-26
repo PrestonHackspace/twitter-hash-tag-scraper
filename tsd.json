@@ -1,0 +1,18 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "node/node.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    },
+    "knex/knex.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    },
+    "bluebird/bluebird.d.ts": {
+      "commit": "27d7b56688bfeba9c6fc1ce0ecb611d929982d44"
+    }
+  }
+}

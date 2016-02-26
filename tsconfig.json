@@ -1,0 +1,23 @@
+{
+  "version": "1.7.5",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "jsx": "react",
+    "inlineSourceMap": true,
+    "inlineSources": true
+  },
+  "filesGlob": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.d.ts",
+    "!./node_modules/**/*.ts"
+  ]
+}
