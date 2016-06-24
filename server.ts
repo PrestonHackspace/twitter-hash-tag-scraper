@@ -23,6 +23,21 @@ app.get('/tags/count', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
+app.get('/clear', (req, res) => {
+  tweetsDb.clear().then(results => {
+    res.send('Tweets cleared');
+  });
+});
+
+app.get('/score.txt', (req, res) => {
+  tagsDb.getAllTags().then(tags => {
+    tweetsDb.getCountByTagNames(tags.map(tag => tag.name)).then(results => {
+      res.send(results.map(r => r.count).join(':'));
+      // res.send([1, 2].join(':'));
+    });
+  });
+});
+
+app.listen(8084, () => {
+  console.log('Example app listening on port 8084!');
 });

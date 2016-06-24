@@ -37,8 +37,13 @@ const getCountByTagNames = (tagNames: string[]) => {
     });
 };
 
+const clear = () => {
+  return knex('tweets').delete();
+};
+
 export default {
   insert,
   getCountByTagId,
-  getCountByTagNames
+  getCountByTagNames,
+  clear
 }

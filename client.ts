@@ -10,8 +10,8 @@ import { default as tagsDb, Tag } from './db/tags';
 const client = new Twitter(twitterCredentials);
 
 const startStream = (hashTag: Tag) => {
-  client.stream('statuses/filter', { track: hashTag.name }, function(stream: any) {
-    stream.on('data', function(tweet: any) {
+  client.stream('statuses/filter', { track: hashTag.name }, function (stream: any) {
+    stream.on('data', function (tweet: any) {
       tweetsDb.insert({
         tag_id: hashTag.id,
         tweet: tweet.text,
@@ -19,7 +19,7 @@ const startStream = (hashTag: Tag) => {
       });
     });
 
-    stream.on('error', function(error: any) {
+    stream.on('error', function (error: any) {
       throw error;
     });
   });
